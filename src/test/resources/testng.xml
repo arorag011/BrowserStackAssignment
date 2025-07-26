@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ParallelBrowserStackSuite" parallel="tests" thread-count="5">
+    <test name="Chrome on Windows">
+        <parameter name="os" value="Windows"/>
+        <parameter name="osVersion" value="10"/>
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="device" value=""/>
+        <parameter name="realMobile" value="false"/>
+        <classes><class name="com.selenium.script.SpanishOutletTest"/></classes>
+    </test>
+    <test name="Firefox on Windows">
+        <parameter name="os" value="Windows"/>
+        <parameter name="osVersion" value="10"/>
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="device" value=""/>
+        <parameter name="realMobile" value="false"/>
+        <classes><class name="com.selenium.script.SpanishOutletTest"/></classes>
+    </test>
+    <test name="Safari on Mac">
+        <parameter name="os" value="OS X"/>
+        <parameter name="osVersion" value="Monterey"/>
+        <parameter name="browser" value="Safari"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="device" value=""/>
+        <parameter name="realMobile" value="false"/>
+        <classes><class name="com.selenium.script.SpanishOutletTest"/></classes>
+    </test>
+    <test name="iPhone Test">
+        <parameter name="os" value="iOS"/>
+        <parameter name="osVersion" value="15"/>
+        <parameter name="browser" value="Safari"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="device" value="iPhone 13"/>
+        <parameter name="realMobile" value="true"/>
+        <classes><class name="com.selenium.script.SpanishOutletTest"/></classes>
+    </test>
+    <test name="Android Test">
+        <parameter name="os" value="Android"/>
+        <parameter name="osVersion" value="12.0"/>
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="browserVersion" value="latest"/>
+        <parameter name="device" value="Samsung Galaxy S22"/>
+        <parameter name="realMobile" value="true"/>
+        <classes><class name="com.selenium.script.SpanishOutletTest"/></classes>
+    </test>
+</suite>
